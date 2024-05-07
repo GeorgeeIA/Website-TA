@@ -55,7 +55,7 @@ header {
 }
 
 .header-bg {
-  background-color: #1679ab;
+  background-color: #fcffe0;
   border-top-left-radius: 20px; /* Sudut kiri atas rounded */
   border-top-right-radius: 20px; /* Sudut kanan atas rounded */
 }
@@ -76,7 +76,7 @@ header {
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 3px 15px;
   margin: 10px 15px;
-  color: #e1f7f5;
+  color: #34af4c;
   text-align: center;
   text-transform: uppercase;
 }
@@ -89,10 +89,8 @@ a:focus {
 
 .nav-item a:hover,
 .nav-item a:focus {
-  color: initial;
+  color: #34af4c;
   font-weight: 700;
-  background-color: #04233b;
-  border-radius: 20px;
 }
 
 .btn,
@@ -107,13 +105,6 @@ a:focus {
   height: 35px;
   padding: 0;
   border: none;
-}
-
-.navbar-brand span {
-  font-size: 24px;
-  font-weight: 700;
-  color: #e1f7f5;
-  text-transform: uppercase;
 }
 
 .custom_nav-container {
@@ -139,7 +130,7 @@ a:focus {
   display: block;
   width: 32px;
   height: 4px;
-  background-color: #e1f7f5;
+  background-color: #34af4c;
   border-radius: 15px;
   margin: 7px 0;
   -webkit-transition: all 0.3s;
@@ -155,7 +146,7 @@ a:focus {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #e1f7f5;
+  background-color: #34af4c;
   border-radius: 15px;
   top: -10px;
   -webkit-transition: all 0.3s;
@@ -193,7 +184,7 @@ a:focus {
 }
 
 .quote_btn-container a {
-  color: #e1f7f5;
+  color: #34af4c;
   margin-right: 25px;
   text-transform: uppercase;
 }
@@ -349,7 +340,7 @@ a:focus {
   background: #ffffff;
   line-height: 66px;
   text-align: center;
-  color: #e1f7f5;
+  color: #34af4c;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -373,7 +364,7 @@ a:focus {
   right: 0;
   height: 54px;
   width: 54px;
-  background: rgba(7, 65, 115, 0.676);
+  background: #fcffe0;
   content: "";
   z-index: -1;
   margin: 0 auto;
@@ -424,6 +415,7 @@ a:focus {
   position: relative;
   padding-bottom: 0px;
   color: #ffffff;
+  font-weight: 700;
 }
 .line-bottom:before {
   display: none;
@@ -444,7 +436,8 @@ a:focus {
 .line-bottom-kegiatan {
   position: relative;
   padding-bottom: 0px;
-  color: #1679ab;
+  color: #34af4c;
+  font-weight: 700;
 }
 .line-bottom-kegiatan:before {
   display: none;
@@ -492,7 +485,7 @@ a:focus {
 
 .feature h3 {
   font-size: 18px;
-  color: #136ad5;
+  color: #327e3f;
 }
 .feature p {
   font-size: 14px;
@@ -503,7 +496,7 @@ a:focus {
   Info
 -----------------------*/
 .info_section {
-  background-color: #04233bf0;
+  background-color: #327e3f;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
@@ -658,198 +651,4 @@ a:focus {
 
 .footer_section p a {
   color: inherit;
-}
-
-.card-big-shadow {
-  max-width: 320px;
-  position: relative;
-}
-
-.coloured-cards .card {
-  margin-top: 30px;
-}
-
-.card-big-shadow .card[data-radius="none"] {
-  border-radius: 0px;
-}
-.card-big-shadow .card {
-  border-radius: 8px;
-  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-  background-color: #ffffff;
-  color: #252422;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.card-big-shadow .card[data-background="image"] .title,
-.card-big-shadow .card[data-background="image"] .stats,
-.card-big-shadow .card[data-background="image"] .category,
-.card-big-shadow .card[data-background="image"] .description,
-.card-big-shadow .card[data-background="image"] .content,
-.card-big-shadow .card[data-background="image"] .card-footer,
-.card-big-shadow .card[data-background="image"] small,
-.card-big-shadow .card[data-background="image"] .content a,
-.card-big-shadow .card[data-background="color"] .title,
-.card-big-shadow .card[data-background="color"] .stats,
-.card-big-shadow .card[data-background="color"] .category,
-.card-big-shadow .card[data-background="color"] .description,
-.card-big-shadow .card[data-background="color"] .content,
-.card-big-shadow .card[data-background="color"] .card-footer,
-.card-big-shadow .card[data-background="color"] small,
-.card-big-shadow .card[data-background="color"] .content a {
-  color: #ffffff;
-}
-
-.card-big-shadow .card.card-just-text .content {
-  padding: 50px 65px;
-  text-align: center;
-}
-.card-big-shadow .card .content {
-  padding: 20px 20px 10px 20px;
-}
-
-.card-big-shadow .card .title {
-  color: white;
-}
-
-.card-big-shadow.card .category,
-.card-big-shadow .card .label {
-  font-size: 14px;
-  margin-bottom: 0px;
-}
-.card-big-shadow:before {
-  background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  bottom: -12%;
-  content: "";
-  display: block;
-  left: -12%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-}
-h4,
-.h4 {
-  font-size: 1.5em;
-  font-weight: 600;
-  line-height: 1.2em;
-}
-h6,
-.h6 {
-  font-size: 0.9em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.card-big-shadow .card .description {
-  font-size: 16px;
-  color: #66615b;
-}
-.content-card {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
-/*======== COLORS ===========*/
-
-.card-big-shadow .card[data-color="yellow"] {
-  background: #f3ca52;
-}
-.card-big-shadow .card[data-color="yellow"] .description {
-  color: #0a6847;
-}
-.card-big-shadow .card[data-color="yellow"] .category {
-  color: #ff6500;
-}
-
-.team-boxed {
-  color: #313437;
-}
-
-.team-boxed p {
-  color: #7d8285;
-}
-
-.team-boxed h2 {
-  font-weight: bold;
-  margin-bottom: 40px;
-  padding-top: 40px;
-  color: inherit;
-}
-
-@media (max-width: 767px) {
-  .team-boxed h2 {
-    margin-bottom: 25px;
-    padding-top: 25px;
-    font-size: 24px;
-  }
-}
-
-.team-boxed .intro {
-  font-size: 16px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.team-boxed .people {
-  padding: 10;
-}
-
-.team-boxed .item {
-  text-align: center;
-}
-
-.team-boxed .item .box {
-  text-align: center;
-  padding: 30px;
-  background-color: #fefaf6;
-  margin-bottom: 30px;
-}
-
-.team-boxed .item .name {
-  font-weight: bold;
-  margin-top: 28px;
-  margin-bottom: 8px;
-  color: inherit;
-}
-
-.team-boxed .item .title {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #d0d0d0;
-  letter-spacing: 2px;
-  font-size: 13px;
-}
-
-.team-boxed .item .description {
-  font-size: 15px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-.team-boxed .item img {
-  max-width: 160px;
-}
-
-.form-group {
-  margin-bottom: 15px; /* Jarak antara setiap form-group */
-}
-
-.form-group label {
-  width: 400px; /* Lebar label */
-}
-
-.form-group input {
-  flex: 1; /* Agar input menempati sisa ruang yang tersedia */
-}
-
-#form-pilih {
-  width: 670px;
 }

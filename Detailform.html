@@ -8,6 +8,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/logo gki sulsel.png"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -20,11 +27,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/Detailform.css" />
 
     <title>GKI SulSel Pos Tigaraksa</title>
   </head>
   <body>
-    <nav class="nav_atas" style="background-color: #04233b">
+    <nav class="nav_atas" style="background-color: #327e3f">
       <div class="info_social container my-1">
         <a class="" href="">
           <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -48,8 +56,13 @@
         <div class="header-bg">
           <header class="header_section long_section px-0">
             <nav class="navbar navbar-expand-lg custom_nav-container">
-              <a class="navbar-brand" href="index.html">
-                <span> GKI Tigaraksa </span>
+              <a class="navbar-brand ml-4" href="index.html">
+                <img
+                  src="img/logo gki sulsel.png"
+                  width="50"
+                  height="50"
+                  alt=""
+                />
               </a>
               <button
                 class="navbar-toggler"
@@ -77,10 +90,30 @@
                       <a class="nav-link" href="about.html"> About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="informasi.html">Warta</a>
+                      <a class="nav-link" href="warta.html">Warta</a>
                     </li>
-                    <li class="nav-item font-weight-bold">
-                      <a class="nav-link" href="form.html">informasi</a>
+                    <li class="nav-item dropdown font-weight-bold">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Formulir
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <a class="dropdown-item" href="Detailform.html"
+                          >Formulir A</a
+                        >
+                        <a class="dropdown-item" href="#">Formulir B</a>
+                        <a class="dropdown-item" href="#">Formulir C</a>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -104,130 +137,138 @@
         <div class="p-5">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Informasi</a></li>
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="form.html">Informasi</a></li>
               <li class="breadcrumb-item active" aria-current="page">
                 Formulir .....
               </li>
             </ol>
           </nav>
-          <form action="hasil.php" method="post" enctype="multipart/form-data">
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleInputNama">Masukkan Nama</label>
-              <input
-                type="text"
-                class="form-control"
-                name="MasukanNama"
-                id="MasukanNama"
-                required
-                placeholder="Enter Nama"
-              />
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                name="MasukanEmail"
-                required
-                placeholder="Enter email"
-              />
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleInputNomorHP">Nomor HP</label>
-              <input
-                type="number"
-                class="form-control"
-                name="NomorHP"
-                onchange="console.log(this.value)"
-                required
-                placeholder="Enter NomorHP"
-              />
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleFormControlSelect1" id="form-pilih"
-                >Semester saat ini</label
-              >
-              <select
-                name="smt"
-                class="form-control"
-                id=""
-                onchange="semester(this)"
-                required
-              >
-                <option value="0">-- Pilih --</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-              </select>
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleInputIPK">IPK Terakhir</label>
-              <input
-                type="text"
-                class="form-control"
-                id="ipk"
-                name="ipk"
-                readonly
-              />
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleFormControlSelect2" id="form-pilih"
-                >Pilihan Beasiswa</label
-              >
-              <select
-                class="form-control"
-                name="beasiswa"
-                id="beasiswa"
-                required
-                disabled="false"
-              >
-                <option value="">-- Pilih --</option>
-                <option value="Beasiswa Akademik">Beasiswa Akademik</option>
-                <option value="Beasiswa Non-Akademik">
-                  Beasiswa Non-Akademik
-                </option>
-                <option value="Beasiswa Bidikmisi">Beasiswa Bidikmisi</option>
-              </select>
-            </div>
-            <div class="form-group d-flex justify-content-between">
-              <label for="exampleFormControlFile1">Upload Berkas</label>
-              <input
-                name="data[]"
-                type="file"
-                class="form-control-file"
-                id="berkas"
-                required
-                accept="application/pdf/png/jpg"
-                disabled="false"
-              />
-            </div>
-            <!--status ajuan-->
-            <div class="form-group">
-              <input
-                type="text"
-                name="status_ajuan"
-                hidden
-                value="belum diverifikasi"
-              />
-            </div>
-            <div class="d-flex justify-content-between">
-              <button
-                id="btnSubmit"
-                type="submit"
-                class="btn btn-primary"
-                disabled="false"
-              >
-                Daftar
-              </button>
-              <a class="btn btn-danger" href="form.html">Batal</a>
-            </div>
-          </form>
+          <div class="card p-3">
+            <form
+              action="hasil.php"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <h5 class="card-title">Formulir .....</h5>
+              <hr />
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleInputNama">Masukkan Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="MasukanNama"
+                  id="MasukanNama"
+                  required
+                  placeholder="Enter Nama"
+                />
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="MasukanEmail"
+                  required
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleInputNomorHP">Nomor HP</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="NomorHP"
+                  onchange="console.log(this.value)"
+                  required
+                  placeholder="Enter NomorHP"
+                />
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleFormControlSelect1" id="form-pilih"
+                  >Semester saat ini</label
+                >
+                <select
+                  name="smt"
+                  class="form-control"
+                  id=""
+                  onchange="semester(this)"
+                  required
+                >
+                  <option value="0">-- Pilih --</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleInputIPK">IPK Terakhir</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ipk"
+                  name="ipk"
+                  readonly
+                />
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleFormControlSelect2" id="form-pilih"
+                  >Pilihan Beasiswa</label
+                >
+                <select
+                  class="form-control"
+                  name="beasiswa"
+                  id="beasiswa"
+                  required
+                  disabled="false"
+                >
+                  <option value="">-- Pilih --</option>
+                  <option value="Beasiswa Akademik">Beasiswa Akademik</option>
+                  <option value="Beasiswa Non-Akademik">
+                    Beasiswa Non-Akademik
+                  </option>
+                  <option value="Beasiswa Bidikmisi">Beasiswa Bidikmisi</option>
+                </select>
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleFormControlFile1">Upload Berkas</label>
+                <input
+                  name="data[]"
+                  type="file"
+                  class="form-control-file"
+                  id="berkas"
+                  required
+                  accept="application/pdf/png/jpg"
+                  disabled="false"
+                />
+              </div>
+              <!--status ajuan-->
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="status_ajuan"
+                  hidden
+                  value="belum diverifikasi"
+                />
+              </div>
+              <div class="d-flex justify-content-between">
+                <button
+                  id="btnSubmit"
+                  type="submit"
+                  class="btn btn-primary"
+                  disabled="false"
+                >
+                  Daftar
+                </button>
+                <a class="btn btn-danger" href="form.html">Batal</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
