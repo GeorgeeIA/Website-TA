@@ -50,6 +50,6 @@
 
   .form-group label {
     width: auto; /* Lebar label otomatis agar responsif pada perangkat seluler */
-    margin-bottom: 5px; /* Jarak antar form-group pada perangkat seluler */
+    margin-bottom: 5px; /* Jarak antar form-group pada perangkat seluler IPDATE */
   }
 }

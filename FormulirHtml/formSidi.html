@@ -12,7 +12,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="img/logo gki sulsel.png"
+      href="/img/logo gki sulsel.png"
     />
 
     <!-- Bootstrap CSS -->
@@ -26,8 +26,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/Detailform.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/Detailform.css" />
 
     <title>GKI SulSel Pos Tigaraksa</title>
   </head>
@@ -58,7 +58,7 @@
             <nav class="navbar navbar-expand-lg custom_nav-container">
               <a class="navbar-brand ml-4" href="index.html">
                 <img
-                  src="img/logo gki sulsel.png"
+                  src="/img/logo gki sulsel.png"
                   width="50"
                   height="50"
                   alt=""
@@ -130,7 +130,7 @@
         <!-- End Nav -->
         <div
           style="
-            background-image: url('img/hero/hero123.png');
+            background-image: url('/img/hero/hero123.png');
             background-size: cover;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -149,7 +149,7 @@
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item"><a href="form.html">Informasi</a></li>
               <li class="breadcrumb-item active" aria-current="page">
-                Formulir Keanggotan Jemaat
+                Formulir Peneguhan Sidi
               </li>
             </ol>
           </nav>
@@ -159,30 +159,20 @@
               method="post"
               enctype="multipart/form-data"
             >
-              <h5 class="card-title">Formulir Keanggotan Jemaat</h5>
+              <h5 class="card-title">Formulir Peneguhan Sidi</h5>
               <hr />
               <div class="form-group d-flex justify-content-between">
-                <label for="exampleInputNama">Masukkan Nama</label>
+                <label for="exampleInputNama">Masukkan Nama </label>
                 <input
                   type="text"
                   class="form-control"
                   name="MasukanNama"
                   id="MasukanNama"
                   required
-                  placeholder="Enter Nama"
+                  placeholder="Enter Nama "
                 />
               </div>
-              <div class="form-group d-flex justify-content-between">
-                <label for="exampleFormControlTextarea1" id="form-pilih"
-                  >Masukkan Alamat</label
-                >
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  required
-                ></textarea>
-              </div>
+
               <div class="form-group d-flex justify-content-between">
                 <label for="exampleInputNama"
                   >Masukkan Tempat/Tanggal Lahir</label
@@ -196,17 +186,19 @@
                   placeholder="Enter Tempat/Tanggal Lahir"
                 />
               </div>
+
               <div class="form-group d-flex justify-content-between">
-                <label for="exampleInputNama">Masukkan Pekerjaan</label>
-                <input
-                  type="text"
+                <label for="exampleFormControlTextarea1" id="form-pilih"
+                  >Masukkan Alamat</label
+                >
+                <textarea
                   class="form-control"
-                  name="MasukanPekerjaan"
-                  id="MasukanPekerjaan"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
                   required
-                  placeholder="Enter Pekerjaan"
-                />
+                ></textarea>
               </div>
+
               <div class="form-group d-flex justify-content-between">
                 <label for="exampleInputNomorHP">Nomor HP</label>
                 <input
@@ -218,20 +210,38 @@
                   placeholder="Enter NomorHP"
                 />
               </div>
+
               <div class="form-group d-flex justify-content-between">
-                <label for="exampleFormControlTextarea1" id="form-pilih"
-                  >Masukkan Anggota Keluar</label
-                >
-                <textarea
+                <label for="exampleInputNama"
+                  >Masukkan Baptis Anak (Tempat)
+                </label>
+                <input
+                  type="text"
                   class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
+                  name="MasukanNamaTempat"
+                  id="MasukanNamaTempat"
                   required
-                ></textarea>
+                  placeholder="Enter Nama Tempat "
+                />
               </div>
+
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleInputNama"
+                  >Masukkan Baptis Anak (Tanggal)
+                </label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="MasukanNamaTanggal"
+                  id="MasukanNamaTanggal"
+                  required
+                  placeholder="Enter Nama Tanggal "
+                />
+              </div>
+
               <div class="form-group d-flex justify-content-between">
                 <label for="exampleFormControlFile1"
-                  >Scan Surat Baptis/Sidi (setiap anggota keluarga)</label
+                  >Scan Surat Baptisan Anak</label
                 >
                 <input
                   name="data[]"
@@ -245,9 +255,7 @@
               </div>
 
               <div class="form-group d-flex justify-content-between">
-                <label for="exampleFormControlFile1"
-                  >Scan Surat Atestasi/Surat keterangan dari Gereja Asal</label
-                >
+                <label for="exampleFormControlFile1">Pas Foto 3 x 4</label>
                 <input
                   name="data[]"
                   type="file"
@@ -258,20 +266,16 @@
                   disabled="false"
                 />
               </div>
+
               <div class="form-group d-flex justify-content-between">
                 <label for="exampleFormControlFile1">Tanda Tangan</label>
               </div>
 
               <div class="d-flex justify-content-between">
-                <button
-                  id="btnSubmit"
-                  type="submit"
-                  class="btn btn-primary"
-                  disabled="false"
-                >
+                <button id="btnSubmit" type="submit" class="btn btn-primary">
                   Daftar
                 </button>
-                <a class="btn btn-danger" href="form.html">Batal</a>
+                <a class="btn btn-danger" href="/index.html">Batal</a>
               </div>
             </form>
           </div>

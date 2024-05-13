@@ -111,11 +111,98 @@
                         class="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                       >
-                        <a class="dropdown-item" href="Detailform.html"
-                          >Formulir A</a
+                        <a
+                          class="dropdown-item"
+                          href="FormulirHtml/formatestasiKeluar.html"
                         >
-                        <a class="dropdown-item" href="#">Formulir B</a>
-                        <a class="dropdown-item" href="#">Formulir C</a>
+                          Formulir Atestasi Keluar/Pindah
+                        </a>
+                        <a
+                          class="dropdown-item"
+                          href="FormulirHtml/formKeanggotaan.html"
+                        >
+                          Formulir Atestasi Masuk
+                        </a>
+                        <a
+                          class="dropdown-item"
+                          href="FormulirHtml/formketeranganAnggota.html"
+                        >
+                          Formulir Keterangan Kaanggotaan
+                        </a>
+                        <a
+                          class="dropdown-item dropdown-toggle"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Formulir Baptis
+                        </a>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formbaptisAnak.html"
+                            >Baptis Anak</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formbaptisDewasa.html"
+                            >Baptis Dewasa</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formSidi.html"
+                            >Sidi</a
+                          >
+                        </div>
+                        <a
+                          class="dropdown-item dropdown-toggle"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Formulir Pernikahan
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#"
+                            >Peneguhan Pernikahan</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formijinNikah.html"
+                            >Ijin Nikah</a
+                          >
+                        </div>
+                        <a
+                          class="dropdown-item dropdown-toggle"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Formulir Nilai Agama
+                        </a>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formnilaiagamaSekolahSD.html"
+                            >SD</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formnilaiagamaSMPSMA.html"
+                            >SMP & SMA/K</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="FormulirHtml/formnilaiagamaKampus.html"
+                            >Perguruan Tinggi</a
+                          >
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -508,5 +595,27 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // Mengatur perilaku dropdown
+      $(".dropdown-toggle").on("click", function (e) {
+        if (!$(this).next().hasClass("show")) {
+          $(this)
+            .parents(".dropdown-menu")
+            .first()
+            .find(".show")
+            .removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass("show");
+
+        $(this)
+          .parents("li.nav-item.dropdown.show")
+          .on("hidden.bs.dropdown", function (e) {
+            $(".dropdown-submenu .show").removeClass("show");
+          });
+
+        return false;
+      });
+    </script>
   </body>
 </html>
